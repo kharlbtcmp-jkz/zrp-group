@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-/* NavLink adds the "active" class to the link of the current page */
 .nav-link {
   padding-bottom: 2px;
   color: #ddd6fe;
@@ -30,7 +29,7 @@
   content: "";
   position: absolute;
   inset: -30%;
-  background: radial-gradient(circle, rgba(255,255,255,0.45), transparent 55%);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.45), transparent 55%);
   transform: scale(0.8);
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;

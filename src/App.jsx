@@ -17,7 +17,6 @@ function App() {
   function addToCart(product, quantity) {
     const found = cart.find((item) => item.id === product.id);
     if (found) {
-      
       setCart(
         cart.map((item) =>
           item.id === product.id
@@ -40,7 +39,6 @@ function App() {
 
   return (
     <Routes>
-      {/* Parent route: Header shows the navbar and footer on every page */}
       <Route path="/" element={<Header cartCount={cart.length} />}>
         <Route index element={<Home />} />
         <Route path="items" element={<Items />} />

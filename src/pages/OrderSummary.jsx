@@ -4,7 +4,6 @@ export default function OrderSummary() {
   const location = useLocation();
   const order = location.state?.order;
 
-  // Happens if the page is opened directly or refreshed
   if (!order) {
     return (
       <section className="mx-auto max-w-xl px-4 py-16 text-center">
