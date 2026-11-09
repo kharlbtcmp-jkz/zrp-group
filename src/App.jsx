@@ -11,13 +11,13 @@ import NotFound from "./pages/NotFound.jsx";
 import About from "./pages/About.jsx";
 
 function App() {
-  // The cart lives here so every page can share it (lifted state)
+
   const [cart, setCart] = useState([]);
 
   function addToCart(product, quantity) {
     const found = cart.find((item) => item.id === product.id);
     if (found) {
-      // Same product again: create a NEW array with the updated quantity
+      
       setCart(
         cart.map((item) =>
           item.id === product.id
