@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { Route, Routes } from "react-router";
 import Header from "./components/Header.jsx";
 import Home from "./pages/Home.jsx";
@@ -9,33 +8,10 @@ import Form from "./pages/Form.jsx";
 import OrderSummary from "./pages/OrderSummary.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import About from "./pages/About.jsx";
+import useCart from "./hooks/useCart.js";
 
 function App() {
-
-  const [cart, setCart] = useState([]);
-
-  function addToCart(product, quantity) {
-    const found = cart.find((item) => item.id === product.id);
-    if (found) {
-      setCart(
-        cart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item
-        )
-      );
-    } else {
-      setCart([...cart, { ...product, quantity }]);
-    }
-  }
-
-  function removeFromCart(id) {
-    setCart(cart.filter((item) => item.id !== id));
-  }
-
-  function clearCart() {
-    setCart([]);
-  }
+  const { cart, addToCart, removeFromCart, clearCart } = useCart();
 
   return (
     <Routes>
