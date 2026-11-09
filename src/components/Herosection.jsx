@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import homeBackground from "../img/Home.png";
+import homeBackground from "../img/Home.webp";
 
 const highlights = [
   "Genuine phones and gadgets",
@@ -13,7 +13,6 @@ export default function HeroSection() {
       className="relative flex min-h-screen items-center bg-cover bg-top"
       style={{ backgroundImage: `url(${homeBackground})` }}
     >
-      {/* Deep purple overlay: heavy on the left, still dark on the right */}
       <div className="absolute inset-0" />
       <div className="absolute inset-0 bg-linear-to-r from-[#0c0314] via-[#0c0314]/85 to-[#1a0830]/40" />
 
