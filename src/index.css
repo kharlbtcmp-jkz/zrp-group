@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* NavLink adds the "active" class to the link of the current page */
+.nav-link {
+  padding-bottom: 2px;
+  color: #ddd6fe;
+  font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.nav-link.active {
+  color: #ffffff;
+  border-bottom: 2px solid #a78bfa;
+}
+
+.aura-btn {
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(167, 139, 250, 0.8), 0 0 20px rgba(167, 139, 250, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.aura-btn::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle, rgba(255,255,255,0.45), transparent 55%);
+  transform: scale(0.8);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.aura-btn:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 0 0 6px rgba(167, 139, 250, 0.18), 0 0 25px rgba(167, 139, 250, 0.8);
+}
+
+.aura-btn:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
