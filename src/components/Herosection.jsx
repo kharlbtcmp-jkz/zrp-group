@@ -1,12 +1,6 @@
 import { Link } from "react-router";
 import homeBackground from "../img/Home.webp";
 
-const highlights = [
-  "Genuine phones and gadgets",
-  "Fair prices on every item",
-  "Support before and after you buy",
-];
-
 export default function HeroSection() {
   return (
     <section
